@@ -101,3 +101,22 @@ document.querySelector("#brusselsSproutsImg").removeAttribute("hidden")
 document.querySelector("#broccoliImg").removeAttribute("hidden")
 
 // Bonus 2 - Promise all
+
+function createBrussels() {
+const case0 = obtainInstruction("brusselsSprouts",0);
+const case1 = obtainInstruction("brusselsSprouts",1);
+const case2 = obtainInstruction("brusselsSprouts",2);
+const case3 = obtainInstruction("brusselsSprouts",3);
+const case4 = obtainInstruction("brusselsSprouts",4);
+const case5 = obtainInstruction("brusselsSprouts",5);
+const case6 = obtainInstruction("brusselsSprouts",6);
+
+Promise.all([case0,case1,case2,case3,case4,case5,case6]).then ((value) => {
+  for (i=0;i<value.length;i++) {
+    document.querySelector("#brusselsSprouts").innerHTML += `<li>${value[i]}</li>`;
+  }
+  document.querySelector("#brusselsSprouts").innerHTML += `<li>Brussels sprouts are ready!</li>`
+})
+}
+createBrussels();
+
