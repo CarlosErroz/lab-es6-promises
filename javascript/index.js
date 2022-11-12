@@ -76,6 +76,23 @@ for (i=0; (i+1)<steak.length;i++) {
 
 // Iteration 3 using async/await
 // ...
+async function makeBroccoli() {
+  let value1 = await obtainInstruction("broccoli",0);
+  document.querySelector("#broccoli").innerHTML += `<li>${value1}</li>`;
+  let value2 = await obtainInstruction("broccoli",1);
+  document.querySelector("#broccoli").innerHTML += `<li>${value2}</li>`;
+  let value3 = await obtainInstruction("broccoli",2);
+  document.querySelector("#broccoli").innerHTML += `<li>${value3}</li>`;
+  let value4 = await obtainInstruction("broccoli",3);
+  document.querySelector("#broccoli").innerHTML += `<li>${value4}</li>`;
+  let value5 = await obtainInstruction("broccoli",4);
+  document.querySelector("#broccoli").innerHTML += `<li>${value5}</li>`;
+  let value6 = await obtainInstruction("broccoli",5);
+  document.querySelector("#broccoli").innerHTML += `<li>${value6}</li>`;
+  document.querySelector("#broccoli").innerHTML += `<li>Broccoli is ready!</li>`;
+}
+
+makeBroccoli()
 /*
 async function Broccoli() {
   let value = await obtainInstruction("broccoli",0);
