@@ -31,10 +31,57 @@
 // ...
 
 // Iteration 2 - using promises
-// ...
+obtainInstruction('steak', 0).then((value0) => {
+    document.querySelector("#steak").innerHTML += `<li>${value0}</li>`
+    
+    obtainInstruction('steak', 1).then((value1) => {
+      document.querySelector("#steak").innerHTML += `<li>${value1}</li>`
+
+      obtainInstruction('steak', 2).then((value2) => {
+        document.querySelector("#steak").innerHTML += `<li>${value2}</li>`
+
+        obtainInstruction('steak', 3).then((value3) => {
+          document.querySelector("#steak").innerHTML += `<li>${value3}</li>`
+
+          obtainInstruction('steak', 4).then((value4) => {
+            document.querySelector("#steak").innerHTML += `<li>${value4}</li>`
+
+            obtainInstruction('steak', 5).then((value5) => {
+              document.querySelector("#steak").innerHTML += `<li>${value5}</li>`
+
+              obtainInstruction('steak', 6).then((value6) => {
+                document.querySelector("#steak").innerHTML += `<li>${value6}</li>`
+                document.querySelector("#steak").innerHTML += `<li>Stake is ready!</li>`
+              })
+            })
+          })
+        })
+      })
+    })
+  })
+
+  
+/* No conseguí con el for
+for (i=0; (i+1)<steak.length;i++) {
+  let varSteak = obtainInstruction("steak", i)
+  if (varSteak.isFulfilled) {
+    console.log(document.querySelector("#steak").innerHTML += `<li>${varSteak}</li>`)
+  }
+}
+*/
+
+
+
+
 
 // Iteration 3 using async/await
 // ...
+/*
+async function Broccoli() {
+  let value = await obtainInstruction("broccoli",0);
+  document.querySelector("broccoli").innerHTML += `<li>${value}</li>`;
+}
+*/
 
 // Bonus 2 - Promise all
 // ...
