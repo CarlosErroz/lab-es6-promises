@@ -93,12 +93,11 @@ async function makeBroccoli() {
 }
 
 makeBroccoli()
-/*
-async function Broccoli() {
-  let value = await obtainInstruction("broccoli",0);
-  document.querySelector("broccoli").innerHTML += `<li>${value}</li>`;
-}
-*/
+
+// Bonus 1 de que salgan las imágenes
+
+document.querySelector("#steakImg").removeAttribute("hidden")
+document.querySelector("#brusselsSproutsImg").removeAttribute("hidden")
+document.querySelector("#broccoliImg").removeAttribute("hidden")
 
 // Bonus 2 - Promise all
-// ...
